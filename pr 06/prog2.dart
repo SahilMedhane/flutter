@@ -1,18 +1,18 @@
 import "dart:io";
 
 void main() {
-  int number = int.parse(stdin.readLineSync()!);
+  int temp;
+  print("enter number");
 
-  if (number % 2 == 0) {
-    while (number != 0) {
-      print(number);
-      number--;
-    }
-  } else {
-    while (number > 0) {
-      print(number);
-      print(number - 2);
-      number -= 4;
+  int n = int.parse(stdin.readLineSync()!);
+
+  temp = n;
+  while (temp > 0) {
+    print(temp);
+    if (n % 2 == 0) {
+      temp--;
+    } else {
+      temp -= 2;
     }
   }
 }
