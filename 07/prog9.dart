@@ -1,17 +1,15 @@
-import 'dart:io';
+import "dart:io";
 
 void main() {
   int rows = int.parse(stdin.readLineSync()!);
-  int number = 1;
+  int counter = 1;
 
   for (int i = 0; i < rows; i++) {
     for (int j = 0; j < rows; j++) {
-      stdout.write("$number ");
-      if (j != rows - 1) {
-        number++;
-      }
+      stdout.write("$counter ");
+      counter++;
     }
-
     print("");
+    counter = counter - 1;
   }
 }
